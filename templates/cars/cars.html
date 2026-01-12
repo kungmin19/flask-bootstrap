@@ -33,7 +33,12 @@
       <td>{{ car.brand }}</td>
       <td>{{ car.model }}</td>
       <td>
-        
+        <a href="{{ url_for('Edit_car', id=car.id) }}" class="btn btn-outline-success btn-sm" title="Edit car">
+            Edit
+        </a>
+        <a href="{{ url_for('delete_car' ,id=car.id)}}" class="btn btn-outline-danger btn-sm" tabindex="delete_car">
+           <i class="bi bi-x-octagon-fill"></i>
+        </a>
       </td>
     </tr>
     {% endfor %}
